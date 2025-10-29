@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # n8n local data
 .env
 n8n_data/
@@ -19,3 +20,6 @@ notes/
 # Logs
 *.log
 
+=======
+hi.txt
+>>>>>>> 9f94011a66d0285ae5ad4bc94f20461bd9510132
