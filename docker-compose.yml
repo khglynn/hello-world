@@ -1,0 +1,69 @@
+# n8n Docker Compose Configuration
+# Best practices for local development and note processing
+version: '3.8'
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      # Basic Configuration
+      - N8N_HOST=${N8N_HOST:-localhost}
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
+      
+      # Security Settings
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_USER:-admin}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD:-changeme}
+      
+      # Timezone (adjust to your location)
+      - GENERIC_TIMEZONE=${TIMEZONE:-America/New_York}
+      - TZ=${TIMEZONE:-America/New_York}
+      
+      # Execution Settings (better for note processing workflows)
+      - EXECUTIONS_MODE=regular
+      - EXECUTIONS_TIMEOUT=300
+      - EXECUTIONS_TIMEOUT_MAX=600
+      
+      # Workflow Settings
+      - WORKFLOWS_DEFAULT_NAME=My Note Workflow
+      - N8N_WORKFLOW_TAGS_DISABLED=false
+      
+      # Editor Settings
+      - N8N_PERSONALIZATION_ENABLED=true
+      - N8N_DIAGNOSTICS_ENABLED=false
+      
+      # File Access (Important for note processing!)
+      - N8N_DEFAULT_BINARY_DATA_MODE=filesystem
+      
+    volumes:
+      # Persist n8n data (workflows, credentials, settings)
+      - n8n_data:/home/node/.n8n
+      
+      # Mount your notes directory (adjust the path!)
+      # Example: ./notes:/notes (maps local 'notes' folder to '/notes' in container)
+      - ./notes:/notes:ro
+      
+      # If you want to output processed notes
+      - ./processed:/processed
+      
+      # Additional directories for backups
+      - ./backups:/backups
+      
+    # Health check to ensure n8n is running properly
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:5678/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# Named volumes for persistent storage
+volumes:
+  n8n_data:
+    driver: local
+

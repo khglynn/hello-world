@@ -1,0 +1,21 @@
+# n8n local data
+.env
+n8n_data/
+
+# Processed files
+processed/
+backups/
+
+# Notes directory (if you want to keep it out of git)
+notes/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
