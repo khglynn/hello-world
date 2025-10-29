@@ -1,0 +1,100 @@
+{
+  "name": "OpenRouter AI Example",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger-1",
+      "name": "When clicking 'Test workflow'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "note-content-1",
+              "name": "noteContent",
+              "value": "This is a sample note about AI and automation. It discusses how to build workflows.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "set-sample-note",
+      "name": "Sample Note",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "HTTP-Referer",
+              "value": "http://localhost:5678"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "openai/gpt-3.5-turbo"
+            },
+            {
+              "name": "messages",
+              "value": "={{ [{\"role\": \"user\", \"content\": \"Summarize this note in 2 sentences:\\n\\n\" + $json.noteContent}] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "openrouter-call",
+      "name": "Call OpenRouter AI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [680, 300],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "openrouter-auth",
+          "name": "OpenRouter API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract AI response\nconst response = $input.first().json;\nconst summary = response.choices[0].message.content;\n\nreturn [{\n  json: {\n    originalNote: $('Sample Note').item.json.noteContent,\n    aiSummary: summary,\n    model: response.model,\n    tokensUsed: response.usage.total_tokens\n  }\n}];"
+      },
+      "id": "parse-response",
+      "name": "Parse AI Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "When clicking 'Test workflow'": {
+      "main": [[{ "node": "Sample Note", "type": "main", "index": 0 }]]
+    },
+    "Sample Note": {
+      "main": [[{ "node": "Call OpenRouter AI", "type": "main", "index": 0 }]]
+    },
+    "Call OpenRouter AI": {
+      "main": [[{ "node": "Parse AI Response", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
+
