@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dallas Voter Guide - November 4, 2025</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #002f87;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+        .voting-logistics {
+            background: linear-gradient(135deg, #002f87 0%, #001a4d 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .voting-logistics h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            margin-top: 0;
+        }
+        .voting-logistics a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .voting-logistics a:hover {
+            text-decoration: underline;
+        }
+        .date-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .cheat-sheet {
+            background: #f8f9fa;
+            border: 2px dashed #002f87;
+            padding: 20px;
+            margin: 25px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            border-radius: 5px;
+        }
+        .copy-btn {
+            background: #002f87;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .copy-btn:hover {
+            background: #001a4d;
+        }
+        .ballot-summary {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .resources {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .resources a {
+            color: #002f87;
+            text-decoration: none;
+        }
+        .resources a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗳️ Dallas Voter Guide - November 4, 2025</h1>
+        
+        <div class="voting-logistics">
+            <h2>📅 When & Where to Vote</h2>
+            
+            <div class="date-box">
+                <strong>🗓️ Early Voting: October 20-31, 2025</strong><br>
+                <strong>⏰ Hours:</strong> Varies by location (most 7 AM - 7 PM weekdays, limited weekend hours)<br>
+                <strong>📍 Find Locations:</strong> <a href="https://www.dallascountyvotes.org/" target="_blank">DallasCountyVotes.org - Early Voting Centers</a><br>
+                <em>✨ You can vote at ANY Dallas County early voting location!</em>
+            </div>
+
+            <div class="date-box">
+                <strong>🗓️ Election Day: Tuesday, November 4, 2025</strong><br>
+                <strong>⏰ Hours:</strong> 7:00 AM - 7:00 PM<br>
+                <strong>📍 Find Your Polling Place:</strong> <a href="https://www.votetexas.gov/mobile/index.htm" target="_blank">VoteTexas.gov Polling Place Locator</a><br>
+                <em>⚠️ On Election Day, you must vote at your assigned precinct</em>
+            </div>
+
+            <div class="date-box">
+                <strong>✅ Check Your Registration:</strong><br>
+                <a href="https://www.votetexas.gov/register-to-vote/am-i-registered.html" target="_blank">Am I Registered to Vote?</a>
+            </div>
+        </div>
+
+        <div class="ballot-summary">
+            <h2>📋 What's on Your Dallas Ballot</h2>
+            <ul>
+                <li><strong>17 Statewide Constitutional Amendments</strong> (all Texas voters)</li>
+                <li><strong>Dallas County measures</strong> (if applicable to your area)</li>
+                <li><strong>City of Dallas measures</strong> (depends on district - check VOTE411.org)</li>
+            </ul>
+            <p><em>💡 Tip: The 17 statewide constitutional amendments are the primary items for most Dallas voters.</em></p>
+        </div>
+
+        <h2>🎯 Your Voting Cheat Sheet</h2>
+        <p>Based on Dallas Morning News, Houston Chronicle, Austin Chronicle, SA Express-News, Every Texan, Texas Democratic Party, and San Antonio DSA:</p>
+
+        <button class="copy-btn" onclick="copyCheatSheet()">📋 Click to Copy</button>
+        
+        <div class="cheat-sheet" id="cheatsheet">🗳️ DALLAS VOTING CHEAT SHEET - November 4, 2025
+
+📍 EARLY VOTING: October 20-31
+   Find locations: dallascountyvotes.org
+   
+📍 ELECTION DAY: November 4 | 7 AM - 7 PM
+   Find your polling place: votetexas.gov
+
+✅ YOUR BALLOT RECOMMENDATIONS (Progressive Consensus):
+
+VOTE YES ⭐:
+  Prop 4:  YES - Water infrastructure fund
+  Prop 7:  YES - Veteran spouse tax exemption
+  Prop 10: YES - Fire/disaster tax relief
+  Prop 11: YES - Senior/disabled tax exemption
+  Prop 12: YES - Judicial oversight reform
+  Prop 13: YES - Homestead exemption increase
+
+VOTE NO ❌:
+  Prop 2:  NO  - Bans capital gains tax (ties legislature's hands)
+  Prop 6:  NO  - Bans securities tax (ties legislature's hands)
+  Prop 8:  NO  - Bans estate tax (ties legislature's hands)
+  Prop 9:  NO  - Business equipment tax break
+  Prop 15: NO  - "Parental rights" (seen as anti-LGBTQ)
+  Prop 16: NO  - Citizenship voting (already required, symbolic)
+  Prop 17: NO  - Border wall tax breaks
+
+YOUR CALL (Sources Disagree):
+  Prop 1:  SPLIT - Tech college fund
+  Prop 3:  SPLIT - Bail expansion (progressives NO, papers YES)
+  Prop 5:  MOSTLY NO - Animal feed tax exemption
+  Prop 14: MOSTLY YES - Dementia research
+
+📖 Full details: [link to this guide]
+        </div>
+
+        <script>
+        function copyCheatSheet() {
+            const text = document.getElementById('cheatsheet').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ Copied! Share with your Dallas friends.');
+            });
+        }
+        </script>
+
+        <div class="resources">
+            <h2>📚 More Information</h2>
+            
+            <h3>Complete Endorsement Table:</h3>
+            <ul>
+                <li><a href="../../shared/texas-constitutional-amendments-2025.html">Texas Constitutional Amendments - Full Analysis & Endorsements</a></li>
+            </ul>
+
+            <h3>Nonpartisan Voter Guides:</h3>
+            <ul>
+                <li><strong>VOTE411.org:</strong> <a href="https://www.vote411.org/lwvtx" target="_blank">Personalized ballot by address</a></li>
+                <li><strong>LWV Dallas:</strong> <a href="https://my.lwv.org/texas/dallas" target="_blank">League of Women Voters - Dallas</a></li>
+                <li><strong>Texas Tribune:</strong> <a href="https://www.texastribune.org/2025/09/22/texas-statewide-propositions-november-ballot-election/" target="_blank">Proposition explainers</a></li>
+            </ul>
+
+            <h3>Dallas-Specific Information:</h3>
+            <ul>
+                <li><strong>Dallas County Elections:</strong> <a href="https://www.dallascountyvotes.org/" target="_blank">dallascountyvotes.org</a></li>
+                <li><strong>City of Dallas:</strong> <a href="https://dallascityhall.com/" target="_blank">dallascityhall.com</a></li>
+            </ul>
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 2px solid #eee;">
+
+        <p style="text-align: center; color: #666; font-size: 14px;">
+            Made for Dallas voters | Created October 30, 2025<br>
+            <a href="../../" style="color: #002f87;">← Back to all cities</a>
+        </p>
+    </div>
+</body>
+</html>
