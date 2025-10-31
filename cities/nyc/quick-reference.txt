@@ -12,14 +12,13 @@
 MAYOR:
   Zohran Mamdani ⭐ (Dem/Working Families)
   
-  (Endorsed by: AOC, WFP, NYPAN, DSA, 1199SEIU)
+  Endorsed by: AOC, WFP, NYPAN, DSA, 1199SEIU
 
 BALLOT PROPOSALS (LWV NYC):
-  Prop 2: YES - Housing review expediting
-  Prop 3: YES - Housing changes
-  Prop 4: RESEARCH - Read full text
-  Prop 5: YES - Housing oversight
-  Prop 6: YES - Move elections to even years
+  Prop 2, 3, 5, 6: YES
+  Prop 4: RESEARCH
 
-📖 Full proposal text: nycvotes.org
-📖 Full guide: [GitHub link]
+CITY COUNCIL:
+  Brooklyn/Flatbush (11226): Rita Joseph (unopposed)
+
+📖 Full details: nycvotes.org

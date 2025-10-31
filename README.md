@@ -8,12 +8,11 @@ Select your city below to get voting dates, polling locations, and progressive b
 
 ## 🏙️ Choose Your City:
 
-### Texas
-- **[Austin](cities/austin-tx/index.html)** - 17 state constitutional amendments
-- **[Houston](cities/houston-tx/index.html)** - 17 state constitutional amendments  
-- **[Dallas](cities/dallas-tx/index.html)** - 17 state constitutional amendments
-
-*All Texas cities share [this complete analysis](shared/texas-constitutional-amendments-2025.html) of the 17 statewide props*
+### Texas (All Cities)
+- **[Texas Voter Guide](cities/texas/index.html)** - For Austin, Houston, Dallas, and all TX cities
+  - 17 statewide constitutional amendments (all voters)
+  - Austin Proposition Q (Austin voters only)
+  - [Complete endorsement analysis](shared/texas-constitutional-amendments-2025.html) with 7 sources
 
 ### Other Cities
 - **[New York City](cities/nyc/index.html)** - Mayor race + 6 ballot proposals

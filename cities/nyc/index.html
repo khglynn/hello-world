@@ -47,36 +47,11 @@
             text-decoration: none;
             font-weight: bold;
         }
-        .voting-logistics a:hover {
-            text-decoration: underline;
-        }
         .date-box {
             background: rgba(255,255,255,0.1);
             padding: 15px;
             border-radius: 5px;
             margin: 10px 0;
-        }
-        .cheat-sheet {
-            background: #f8f9fa;
-            border: 2px dashed #FF6B35;
-            padding: 20px;
-            margin: 25px 0;
-            font-family: 'Courier New', monospace;
-            white-space: pre-wrap;
-            border-radius: 5px;
-        }
-        .copy-btn {
-            background: #FF6B35;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .copy-btn:hover {
-            background: #E55A2B;
         }
         .ballot-summary {
             background: #fff3e0;
@@ -89,6 +64,12 @@
             border-left: 4px solid #2196F3;
             padding: 15px;
             margin: 15px 0;
+        }
+        .alert {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
         }
         table {
             width: 100%;
@@ -105,8 +86,14 @@
             padding: 12px;
             border-bottom: 1px solid #ddd;
         }
-        tr:hover {
-            background: #f9f9f9;
+        .cheat-sheet {
+            background: #f8f9fa;
+            border: 2px dashed #FF6B35;
+            padding: 20px;
+            margin: 25px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            border-radius: 5px;
         }
         .resources {
             background: #f8f9fa;
@@ -118,12 +105,7 @@
             color: #FF6B35;
             text-decoration: none;
         }
-        .resources a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            line-height: 1.8;
-        }
+        ul { line-height: 1.8; }
     </style>
 </head>
 <body>
@@ -162,6 +144,10 @@
                 <li><strong>City Council seats</strong></li>
                 <li><strong>6 Ballot Proposals</strong> (charter amendments, housing, elections)</li>
             </ul>
+        </div>
+
+        <div class="alert">
+            <strong>📍 Brooklyn/Flatbush (ZIP 11226):</strong> City Council District 40 - Rita Joseph running unopposed (no contested race to vote on)
         </div>
 
         <h2>👥 Mayor Race - Progressive Pick</h2>
@@ -216,22 +202,22 @@
         <p style="font-size: 13px; color: #666;"><em>Note: Some progressive groups have concerns about certain housing proposals potentially accelerating gentrification. Check <a href="https://www.nycvotes.org/whats-on-the-ballot/2025-general-election/2025-ballot-proposals/" target="_blank">NYC Votes</a> for full text of each proposal.</em></p>
 
         <h2>🎯 Your Copy-Paste Cheat Sheet</h2>
-
-        <button class="copy-btn" onclick="copyCheatSheet()">📋 Click to Copy</button>
+        <p><em>📋 Select the text below and copy (Cmd+C or Ctrl+C):</em></p>
         
-        <div class="cheat-sheet" id="cheatsheet">🗳️ NYC VOTING CHEAT SHEET - November 4, 2025
+        <div class="cheat-sheet">🗳️ NYC VOTING CHEAT SHEET - November 4, 2025
 
-📍 EARLY VOTING: October 25 - November 2
+📍 EARLY VOTING: Oct 25 - Nov 2
    Hours: 6 AM - 9 PM (most sites)
    Find sites: findmypollsite.vote.nyc
    
-📍 ELECTION DAY: November 4 | 6 AM - 9 PM
+📍 ELECTION DAY: Nov 4 | 6 AM - 9 PM
    Find your site: findmypollsite.vote.nyc
 
 ✅ YOUR BALLOT PICKS (Progressive Recommendations):
 
 MAYOR:
   Zohran Mamdani (Democrat/Working Families Party) ⭐
+  (Endorsed by: AOC, WFP, NYPAN, DSA, unions)
 
 BALLOT PROPOSALS (LWV NYC):
   Proposal 2:  YES - Housing review expediting
@@ -240,17 +226,11 @@ BALLOT PROPOSALS (LWV NYC):
   Proposal 5:  YES - Housing oversight
   Proposal 6:  YES - Move elections to even years
 
-📖 Full details: [link to this guide]
-        </div>
+CITY COUNCIL:
+  Brooklyn/Flatbush (11226): Rita Joseph (unopposed)
 
-        <script>
-        function copyCheatSheet() {
-            const text = document.getElementById('cheatsheet').innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert('✅ Copied! Share with your NYC friends.');
-            });
-        }
-        </script>
+📖 Full proposal text: nycvotes.org
+        </div>
 
         <div class="resources">
             <h2>📚 More Information</h2>

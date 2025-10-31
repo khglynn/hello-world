@@ -53,11 +53,30 @@
             border-radius: 5px;
             margin: 10px 0;
         }
-        .ballot-summary {
-            background: #fff3e0;
+        .district-box {
+            background: #f0f7ff;
+            border-left: 4px solid #2196F3;
             padding: 20px;
-            border-radius: 5px;
             margin: 20px 0;
+        }
+        .district-box h3 {
+            margin-top: 0;
+            color: #1976D2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th {
+            background: #FF6B35;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
         }
         .cheat-sheet {
             background: #f8f9fa;
@@ -67,16 +86,6 @@
             font-family: 'Courier New', monospace;
             white-space: pre-wrap;
             border-radius: 5px;
-        }
-        .copy-btn {
-            background: #FF6B35;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-bottom: 10px;
         }
         .resources {
             background: #f8f9fa;
@@ -101,7 +110,7 @@
             <div class="date-box">
                 <strong>🗓️ Early Voting: October 20 - November 1, 2025</strong><br>
                 <strong>⏰ Hours:</strong> Varies by location (typically 8 AM - 6 PM, some 10 AM - 6 PM)<br>
-                <strong>📍 Find Locations:</strong> <a href="https://www.ocfelections.com/early-voting" target="_blank">Orange County Supervisor of Elections</a><br>
+                <strong>📍 Find Locations:</strong> <a href="https://www.ocfelections.com/early-voting" target="_blank">Orange County Early Voting Sites</a><br>
                 <em>✨ You can vote at ANY Orange County early voting site!</em>
             </div>
 
@@ -124,78 +133,115 @@
             </div>
         </div>
 
-        <div class="ballot-summary">
-            <h2>📋 What's on Your Orlando Ballot</h2>
-            <p><strong>November 4, 2025 Election:</strong></p>
-            <ul>
-                <li><strong>City Council races</strong> (district-specific)</li>
-                <li><strong>Orange County measures</strong> (if applicable)</li>
-                <li><strong>Local municipal items</strong></li>
-            </ul>
+        <h2>📋 What's on Your Orlando Ballot</h2>
+
+        <div class="district-box">
+            <h3>🏙️ Downtown/College Park Area (ZIP 32806)</h3>
+            <p><strong>City Council District 3</strong></p>
             
-            <p style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin-top: 15px;">
-                <strong>ℹ️ Note:</strong> Orlando's November 2025 election primarily features City Council races. For personalized ballot information including your specific district's candidates, use <strong>VOTE411.org</strong> - enter your address to see exactly what you'll be voting on.
-            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Background</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mira Tanna</strong></td>
+                        <td>Progressive candidate focused on equity, housing, transit</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><em>+ 4 other candidates - see <a href="https://ocfelections.gov/orlando2025" target="_blank" style="color: #2196F3;">official candidate list</a></em></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Progressive Pick:</strong> Mira Tanna (equity-focused platform)</p>
         </div>
 
-        <h2>🎯 Your Copy-Paste Cheat Sheet</h2>
+        <div class="district-box">
+            <h3>🏙️ Waterford Lakes Area (ZIP 32832)</h3>
+            <p><strong>City Council District 5</strong></p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Background</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Shaniqua Rose</strong></td>
+                        <td>Incumbent challenger</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Regina Hill</strong></td>
+                        <td>Incumbent (controversial - see news coverage)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Note:</strong> This is a contested race with significant local controversy. Research both candidates before voting.</p>
+        </div>
 
-        <button class="copy-btn" onclick="copyCheatSheet()">📋 Click to Copy</button>
+        <h2>🎯 Your Voting Cheat Sheet</h2>
+        <p><em>📋 Select the text below and copy (Cmd+C or Ctrl+C) to save or share:</em></p>
         
-        <div class="cheat-sheet" id="cheatsheet">🗳️ ORLANDO VOTING CHEAT SHEET - November 4, 2025
+        <div class="cheat-sheet">🗳️ ORLANDO VOTING CHEAT SHEET - November 4, 2025
 
-📍 EARLY VOTING: October 20 - November 1
-   Hours: Varies (typically 8 AM - 6 PM)
+📍 EARLY VOTING: Oct 20 - Nov 1
+   Hours: 8 AM - 6 PM (most sites)
    Find sites: ocfelections.com/early-voting
    
-📍 ELECTION DAY: November 4 | 7 AM - 7 PM
-   Find your precinct: ocfelections.com/polling-place-locator
+📍 ELECTION DAY: Nov 4 | 7 AM - 7 PM
+   Find precinct: ocfelections.com/polling-place-locator
 
 ✉️ VOTE BY MAIL: Request by Oct 26
    ocfelections.com/vote-by-mail
 
 ✅ YOUR BALLOT ITEMS:
 
-City Council Races:
-  [Enter your address at VOTE411.org to see your district's race]
-  
-Orange County Measures:
-  [Check ocfelections.com for county-wide items]
+Downtown/College Park (32806) - District 3:
+  → Mira Tanna (progressive pick - equity focus)
 
-📖 Sample Ballot: ocfelections.com
-📖 Personalized Guide: vote411.org (enter your address)
+Waterford Lakes (32832) - District 5:
+  → Shaniqua Rose vs Regina Hill (research both)
+
+Other ZIPs: Enter your address at vote411.org
+            to find your specific district
+
+📖 Candidate info: ocfelections.gov/orlando2025
         </div>
-
-        <script>
-        function copyCheatSheet() {
-            const text = document.getElementById('cheatsheet').innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert('✅ Copied! Share with your Orlando friends.');
-            });
-        }
-        </script>
 
         <div class="resources">
             <h2>📚 More Information</h2>
             
-            <h3>Official Orange County Voting:</h3>
+            <h3>Official Orlando Voting:</h3>
             <ul>
-                <li><strong>Orange County Supervisor of Elections:</strong> <a href="https://www.ocfelections.com/" target="_blank">ocfelections.com</a></li>
+                <li><strong>Orange County Elections:</strong> <a href="https://www.ocfelections.com/" target="_blank">ocfelections.com</a></li>
+                <li><strong>2025 City Candidates:</strong> <a href="https://ocfelections.gov/orlando2025" target="_blank">All districts & candidates</a></li>
+                <li><strong>Sample Ballot:</strong> <a href="https://www.ocfelections.com/sample-ballot" target="_blank">See your specific ballot</a></li>
                 <li><strong>Early Voting Sites:</strong> <a href="https://www.ocfelections.com/early-voting" target="_blank">Locations & hours</a></li>
-                <li><strong>Sample Ballot Lookup:</strong> <a href="https://www.ocfelections.com/sample-ballot" target="_blank">See your specific ballot</a></li>
             </ul>
 
-            <h3>Nonpartisan Voter Guides:</h3>
+            <h3>Nonpartisan Resources:</h3>
             <ul>
                 <li><strong>VOTE411.org:</strong> <a href="https://www.vote411.org/" target="_blank">Personalized ballot by address</a></li>
                 <li><strong>League of Women Voters FL:</strong> <a href="https://www.lwvfl.org/" target="_blank">lwvfl.org</a></li>
-                <li><strong>Orlando Sentinel:</strong> <a href="https://www.orlandosentinel.com/elections/" target="_blank">Election coverage</a></li>
             </ul>
 
-            <h3>City Council & Local Races:</h3>
+            <h3>Candidate Information:</h3>
             <ul>
-                <li><strong>City of Orlando:</strong> <a href="https://www.orlando.gov/Our-Government/Elections" target="_blank">orlando.gov/Our-Government/Elections</a></li>
-                <li><strong>Find Your District:</strong> <a href="https://www.orlando.gov/Our-Government/Mayor-and-City-Council" target="_blank">orlando.gov Council districts</a></li>
+                <li><strong>District 3 Overview:</strong> <a href="https://www.orlandoweekly.com/news/whos-running-for-orlando-city-council-in-2025-an-overview/" target="_blank">Orlando Weekly coverage</a></li>
+                <li><strong>District 5 Race:</strong> <a href="https://mynews13.com/fl/orlando/news/2025/09/05/hill-to-challenge-rose-in-bid-for-orlando-district-5-council-seat-in-november" target="_blank">Spectrum News analysis</a></li>
+            </ul>
+
+            <h3>City of Orlando:</h3>
+            <ul>
+                <li><strong>City Elections Page:</strong> <a href="https://www.orlando.gov/Our-Government/Elections" target="_blank">orlando.gov/Our-Government/Elections</a></li>
+                <li><strong>Find Your District:</strong> <a href="https://www.orlando.gov/Our-Government/Mayor-and-City-Council" target="_blank">Council district map</a></li>
             </ul>
         </div>
 

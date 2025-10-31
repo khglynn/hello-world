@@ -10,13 +10,15 @@
 ✉️ VOTE BY MAIL: Request by Oct 26
    ocfelections.com/vote-by-mail
 
-✅ YOUR BALLOT:
+✅ YOUR CITY COUNCIL RACE:
 
-City Council Races (district-specific)
-  → Enter your address at VOTE411.org
-    to see your candidates
+Downtown/College Park (32806) - District 3:
+  → Mira Tanna (progressive - equity focus)
 
-Orange County Measures
-  → Check ocfelections.com/sample-ballot
+Waterford Lakes (32832) - District 5:
+  → Shaniqua Rose vs Regina Hill
+    (Research both - controversial race)
 
-📖 Full guide: [GitHub link]
+Other areas: vote411.org (enter your address)
+
+📖 Candidate info: ocfelections.gov/orlando2025
