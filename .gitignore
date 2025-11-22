@@ -1,25 +1,35 @@
-<<<<<<< HEAD
-# n8n local data
-.env
-n8n_data/
-
-# Processed files
-processed/
-backups/
-
-# Notes directory (if you want to keep it out of git)
-notes/
-
-# macOS
+# OS Files
 .DS_Store
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Logs
+*.log
+
+# Personal documents (don't commit PDFs)
+*.pdf
+
+# Environment
+.env
+.venv
+venv/
 
 # IDE
 .vscode/
 .idea/
 
-# Logs
-*.log
+# Obsidian (don't commit actual vault)
+.obsidian/
+*.base
 
-=======
-hi.txt
->>>>>>> 9f94011a66d0285ae5ad4bc94f20461bd9510132
+# Test output
+test_output/
